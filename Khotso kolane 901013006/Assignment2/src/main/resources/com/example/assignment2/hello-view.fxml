@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.HelloController">
+   <bottom>
+      <HBox fx:id="box" alignment="BOTTOM_CENTER" prefHeight="62.0" prefWidth="606.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="p1" fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="50.0" onMouseClicked="#pauseVideo">
+               <image>
+                  <Image url="@pause.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="p2" fitHeight="26.0" fitWidth="26.0" layoutX="50.0" layoutY="50.0" onMouseClicked="#BackwardVideo">
+               <image>
+                  <Image url="@backward.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="play" fitHeight="28.0" fitWidth="28.0" layoutX="50.0" layoutY="50.0" onMouseClicked="#playVideo">
+               <image>
+                  <Image url="@one.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="p3" fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="50.0" onMouseClicked="#ForwardVideo">
+               <image>
+                  <Image url="@forward.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="p4" fitHeight="26.0" fitWidth="26.0" layoutX="50.0" layoutY="50.0" onMouseClicked="#stopVideo">
+               <image>
+                  <Image url="@stop.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="exit" fitHeight="26.0" fitWidth="26.0" layoutX="50.0" layoutY="50.0" onMouseClicked="#exitVideo">
+               <image>
+                  <Image url="@1502.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="volume" wrappingWidth="58.13672065734863">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+            <Slider fx:id="volume" layoutX="50.0" layoutY="50.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Slider>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <MediaView fx:id="mediaView" fitHeight="260.0" fitWidth="600.0" />
+                  <Slider fx:id="progress" prefHeight="17.0" prefWidth="600.0" style="-fx-background-color: Grey;" />
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="44.0" prefWidth="532.0" style="-fx-background-color: Grey;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#5fd1a7" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="MEDIA PLAYER" textAlignment="CENTER" wrappingWidth="358.5257124644439">
+               <font>
+                  <Font name="Felix Titling" size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
